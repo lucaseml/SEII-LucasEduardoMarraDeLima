@@ -82,14 +82,14 @@ def controle(angulo_input, angulo_inicial, tempo_sim, fps):
         # Atualização do estado
         x[:,k+1] = rk4(t_total[k], ta, x[:,k], u[k])
 
-    plt.subplot(2, 1, 1)
-    plt.plot(t_total,x[0,:]*180/np.pi)
-    plt.ylabel('$x_1$ - i ')
-    plt.subplot(2, 1, 2)
-    plt.plot(t_total,x[1,:]*180/np.pi)
-    plt.ylabel('$x_2$ - q')
-    plt.xlabel('t [s]')
-    plt.show()
+    # plt.subplot(2, 1, 1)
+    # plt.plot(t_total,x[0,:]*180/np.pi)
+    # plt.ylabel('$x_1$ - i ')
+    # plt.subplot(2, 1, 2)
+    # plt.plot(t_total,x[1,:]*180/np.pi)
+    # plt.ylabel('$x_2$ - q')
+    # plt.xlabel('t [s]')
+    # plt.show()
 
     return (x[0,:]*180/np.pi) #função retorna o estado x1=theta da simulação com o controle
 
